@@ -1,0 +1,13 @@
+{
+"Ritz": {
+    "filepath": "res://GUI/CharacterSprites/Ritz.png"
+  },
+"Marche" :
+{
+    "filepath": "res://GUI/CharacterSprites/Marche.png"
+  },
+"BlackMage" :
+  {
+    "filepath": "res://GUI/CharacterSprites/BlackMage.png"
+  }
+}

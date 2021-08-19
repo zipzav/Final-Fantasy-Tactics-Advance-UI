@@ -1,0 +1,433 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GUI/UITextBox/TextBoxBG.tres" type="TileSet" id=1]
+[ext_resource path="res://GUI/Fonts/pixelFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://GUI/CharacterSprites/Ritz.png" type="Texture" id=3]
+[ext_resource path="res://ConversationComponent.gdns" type="Script" id=4]
+[ext_resource path="res://GUI/CharacterSprites/DownwardTriangle.png" type="Texture" id=5]
+[ext_resource path="res://UIConversationTextWidget.gdns" type="Script" id=6]
+
+[node name="ConversationComponent" type="Node2D"]
+script = ExtResource( 4 )
+"Letters Per Second" = 26.0
+
+[node name="OriginSelector" type="Node2D" parent="."]
+
+[node name="TopRight" type="Node2D" parent="OriginSelector"]
+position = Vector2( 0, 41 )
+
+[node name="BGSelector" type="Node2D" parent="OriginSelector/TopRight"]
+
+[node name="onesize" type="Node2D" parent="OriginSelector/TopRight/BGSelector"]
+visible = false
+script = ExtResource( 6 )
+
+[node name="bg" type="TileMap" parent="OriginSelector/TopRight/BGSelector/onesize"]
+scale = Vector2( 1, 1.75 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 10, 0, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0 )
+
+[node name="Text" type="Label" parent="OriginSelector/TopRight/BGSelector/onesize"]
+margin_left = 681.0
+margin_top = -5.699
+margin_right = 877.0
+margin_bottom = 177.301
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The Quick Brown Fox Jumps Over The lazy Dog"
+autowrap = true
+percent_visible = 0.793
+max_lines_visible = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownwardTriangle" type="Sprite" parent="OriginSelector/TopRight/BGSelector/onesize"]
+visible = false
+position = Vector2( 777.777, 190.486 )
+texture = ExtResource( 5 )
+
+[node name="twosize" type="Node2D" parent="OriginSelector/TopRight/BGSelector"]
+visible = false
+script = ExtResource( 6 )
+
+[node name="bg" type="TileMap" parent="OriginSelector/TopRight/BGSelector/twosize"]
+scale = Vector2( 1, 1.75 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 9, 0, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0 )
+
+[node name="Text" type="Label" parent="OriginSelector/TopRight/BGSelector/twosize"]
+margin_left = 623.0
+margin_top = -6.0
+margin_right = 880.0
+margin_bottom = 177.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The Quick Brown Fox Jumps Over The lazy Dog"
+autowrap = true
+max_lines_visible = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownwardTriangle" type="Sprite" parent="OriginSelector/TopRight/BGSelector/twosize"]
+visible = false
+position = Vector2( 805.777, 190.486 )
+texture = ExtResource( 5 )
+
+[node name="threesize" type="Node2D" parent="OriginSelector/TopRight/BGSelector"]
+visible = false
+script = ExtResource( 6 )
+
+[node name="bg" type="TileMap" parent="OriginSelector/TopRight/BGSelector/threesize"]
+scale = Vector2( 1, 1.75 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 8, 0, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0 )
+
+[node name="Text" type="Label" parent="OriginSelector/TopRight/BGSelector/threesize"]
+margin_left = 561.0
+margin_top = -5.699
+margin_right = 877.0
+margin_bottom = 177.301
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The Quick Brown Fox Jumps Over The lazy Dog"
+autowrap = true
+percent_visible = 0.0
+max_lines_visible = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownwardTriangle" type="Sprite" parent="OriginSelector/TopRight/BGSelector/threesize"]
+visible = false
+position = Vector2( 776.777, 190.486 )
+texture = ExtResource( 5 )
+
+[node name="CharacterPortrait" type="Sprite" parent="OriginSelector/TopRight"]
+visible = false
+position = Vector2( 871.185, -34.9162 )
+scale = Vector2( 2.43, 2.43 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="BottomRight" type="Node2D" parent="OriginSelector"]
+visible = false
+position = Vector2( 2.2627, 364 )
+
+[node name="BGSelector" type="Node2D" parent="OriginSelector/BottomRight"]
+
+[node name="onesize" type="Node2D" parent="OriginSelector/BottomRight/BGSelector"]
+visible = false
+script = ExtResource( 6 )
+
+[node name="bg" type="TileMap" parent="OriginSelector/BottomRight/BGSelector/onesize"]
+scale = Vector2( 1, 1.75 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 10, 0, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0 )
+
+[node name="Text" type="Label" parent="OriginSelector/BottomRight/BGSelector/onesize"]
+margin_left = 681.0
+margin_top = -5.699
+margin_right = 877.0
+margin_bottom = 177.301
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The Quick Brown Fox Jumps Over The lazy Dog"
+autowrap = true
+percent_visible = 0.793
+max_lines_visible = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownwardTriangle" type="Sprite" parent="OriginSelector/BottomRight/BGSelector/onesize"]
+visible = false
+position = Vector2( 777.777, 190.486 )
+texture = ExtResource( 5 )
+
+[node name="twosize" type="Node2D" parent="OriginSelector/BottomRight/BGSelector"]
+visible = false
+script = ExtResource( 6 )
+
+[node name="bg" type="TileMap" parent="OriginSelector/BottomRight/BGSelector/twosize"]
+scale = Vector2( 1, 1.75 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 9, 0, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0 )
+
+[node name="Text" type="Label" parent="OriginSelector/BottomRight/BGSelector/twosize"]
+margin_left = 623.0
+margin_top = -6.0
+margin_right = 880.0
+margin_bottom = 177.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The Quick Brown Fox Jumps Over The lazy Dog"
+autowrap = true
+max_lines_visible = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownwardTriangle" type="Sprite" parent="OriginSelector/BottomRight/BGSelector/twosize"]
+visible = false
+position = Vector2( 805.777, 190.486 )
+texture = ExtResource( 5 )
+
+[node name="threesize" type="Node2D" parent="OriginSelector/BottomRight/BGSelector"]
+visible = false
+script = ExtResource( 6 )
+
+[node name="bg" type="TileMap" parent="OriginSelector/BottomRight/BGSelector/threesize"]
+scale = Vector2( 1, 1.75 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 8, 0, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0 )
+
+[node name="Text" type="Label" parent="OriginSelector/BottomRight/BGSelector/threesize"]
+margin_left = 561.0
+margin_top = -5.699
+margin_right = 877.0
+margin_bottom = 177.301
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The Quick Brown Fox Jumps Over The lazy Dog"
+autowrap = true
+percent_visible = 0.0
+max_lines_visible = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownwardTriangle" type="Sprite" parent="OriginSelector/BottomRight/BGSelector/threesize"]
+visible = false
+position = Vector2( 776.777, 190.486 )
+texture = ExtResource( 5 )
+
+[node name="CharacterPortrait" type="Sprite" parent="OriginSelector/BottomRight"]
+visible = false
+position = Vector2( 871.185, -34.9162 )
+scale = Vector2( 2.43, 2.43 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="BottomLeft" type="Node2D" parent="OriginSelector"]
+visible = false
+position = Vector2( 1024, 364 )
+
+[node name="BGSelector" type="Node2D" parent="OriginSelector/BottomLeft"]
+
+[node name="onesize" type="Node2D" parent="OriginSelector/BottomLeft/BGSelector"]
+script = ExtResource( 6 )
+
+[node name="bg" type="TileMap" parent="OriginSelector/BottomLeft/BGSelector/onesize"]
+scale = Vector2( -1, 1.75 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 10, 0, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0 )
+
+[node name="Text" type="Label" parent="OriginSelector/BottomLeft/BGSelector/onesize"]
+margin_left = -884.182
+margin_top = -5.699
+margin_right = -688.182
+margin_bottom = 301.301
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The Quick Brown Fox Jumps Over The lazy Dog"
+autowrap = true
+percent_visible = 0.793
+max_lines_visible = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownwardTriangle" type="Sprite" parent="OriginSelector/BottomLeft/BGSelector/onesize"]
+visible = false
+position = Vector2( -853.777, 190.486 )
+texture = ExtResource( 5 )
+
+[node name="twosize" type="Node2D" parent="OriginSelector/BottomLeft/BGSelector"]
+visible = false
+script = ExtResource( 6 )
+
+[node name="bg" type="TileMap" parent="OriginSelector/BottomLeft/BGSelector/twosize"]
+scale = Vector2( -1, 1.75 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 9, 0, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0 )
+
+[node name="Text" type="Label" parent="OriginSelector/BottomLeft/BGSelector/twosize"]
+margin_left = -884.182
+margin_top = -6.0
+margin_right = -627.182
+margin_bottom = 177.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The Quick Brown Fox Jumps Over The lazy Dog"
+autowrap = true
+max_lines_visible = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownwardTriangle" type="Sprite" parent="OriginSelector/BottomLeft/BGSelector/twosize"]
+visible = false
+position = Vector2( -805.777, 190.486 )
+texture = ExtResource( 5 )
+
+[node name="threesize" type="Node2D" parent="OriginSelector/BottomLeft/BGSelector"]
+visible = false
+script = ExtResource( 6 )
+
+[node name="bg" type="TileMap" parent="OriginSelector/BottomLeft/BGSelector/threesize"]
+scale = Vector2( -1, 1.75 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 8, 0, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0 )
+
+[node name="Text" type="Label" parent="OriginSelector/BottomLeft/BGSelector/threesize"]
+margin_left = -884.182
+margin_top = -5.699
+margin_right = -568.182
+margin_bottom = 177.301
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The Quick Brown Fox Jumps Over The lazy Dog"
+autowrap = true
+percent_visible = 0.0
+max_lines_visible = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownwardTriangle" type="Sprite" parent="OriginSelector/BottomLeft/BGSelector/threesize"]
+visible = false
+position = Vector2( -784.777, 190.486 )
+texture = ExtResource( 5 )
+
+[node name="CharacterPortrait" type="Sprite" parent="OriginSelector/BottomLeft"]
+visible = false
+position = Vector2( -871.015, -34.9162 )
+rotation = 3.14159
+scale = Vector2( 2.43, -2.43 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="TopLeft" type="Node2D" parent="OriginSelector"]
+visible = false
+position = Vector2( 1024, 41 )
+
+[node name="BGSelector" type="Node2D" parent="OriginSelector/TopLeft"]
+
+[node name="onesize" type="Node2D" parent="OriginSelector/TopLeft/BGSelector"]
+script = ExtResource( 6 )
+
+[node name="bg" type="TileMap" parent="OriginSelector/TopLeft/BGSelector/onesize"]
+scale = Vector2( -1, 1.75 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 10, 0, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0 )
+
+[node name="Text" type="Label" parent="OriginSelector/TopLeft/BGSelector/onesize"]
+margin_left = -884.014
+margin_top = -5.699
+margin_right = -688.014
+margin_bottom = 301.301
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The Quick Brown Fox Jumps Over The lazy Dog"
+autowrap = true
+percent_visible = 0.793
+max_lines_visible = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownwardTriangle" type="Sprite" parent="OriginSelector/TopLeft/BGSelector/onesize"]
+visible = false
+position = Vector2( -853.777, 190.486 )
+texture = ExtResource( 5 )
+
+[node name="twosize" type="Node2D" parent="OriginSelector/TopLeft/BGSelector"]
+visible = false
+script = ExtResource( 6 )
+
+[node name="bg" type="TileMap" parent="OriginSelector/TopLeft/BGSelector/twosize"]
+scale = Vector2( -1, 1.75 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 9, 0, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0 )
+
+[node name="Text" type="Label" parent="OriginSelector/TopLeft/BGSelector/twosize"]
+margin_left = -884.182
+margin_top = -6.0
+margin_right = -627.182
+margin_bottom = 177.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The Quick Brown Fox Jumps Over The lazy Dog"
+autowrap = true
+max_lines_visible = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownwardTriangle" type="Sprite" parent="OriginSelector/TopLeft/BGSelector/twosize"]
+visible = false
+position = Vector2( -805.777, 190.486 )
+texture = ExtResource( 5 )
+
+[node name="threesize" type="Node2D" parent="OriginSelector/TopLeft/BGSelector"]
+visible = false
+script = ExtResource( 6 )
+
+[node name="bg" type="TileMap" parent="OriginSelector/TopLeft/BGSelector/threesize"]
+scale = Vector2( -1, 1.75 )
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 8, 0, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0 )
+
+[node name="Text" type="Label" parent="OriginSelector/TopLeft/BGSelector/threesize"]
+margin_left = -884.182
+margin_top = -5.699
+margin_right = -568.182
+margin_bottom = 177.301
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The Quick Brown Fox Jumps Over The lazy Dog"
+autowrap = true
+percent_visible = 0.0
+max_lines_visible = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownwardTriangle" type="Sprite" parent="OriginSelector/TopLeft/BGSelector/threesize"]
+visible = false
+position = Vector2( -784.777, 190.486 )
+texture = ExtResource( 5 )
+
+[node name="CharacterPortrait" type="Sprite" parent="OriginSelector/TopLeft"]
+visible = false
+position = Vector2( -871.015, -34.9162 )
+rotation = 3.14159
+scale = Vector2( 2.43, -2.43 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="DebugButton" type="Button" parent="."]
+margin_left = 3.20001
+margin_top = 564.0
+margin_right = 218.2
+margin_bottom = 598.0
+text = "DebugButton"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioPlayer" type="AudioStreamPlayer" parent="."]

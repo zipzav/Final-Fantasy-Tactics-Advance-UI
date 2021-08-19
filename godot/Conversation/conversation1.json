@@ -1,0 +1,51 @@
+{
+  "characterArray": ["Marche", "Ritz", "BlackMage"],
+  "conversation": [
+    {
+      "character": "Marche",
+      "origin": "TopRight",
+      "speech": [
+        "Let's start at the very beginning.",
+        "A very good place to start. When we read we begin ",
+        "with ABC. When we sing we begin with Do-Re-Mi."
+      ]
+    },
+	{
+      "character": "Ritz",
+      "origin": "TopLeft",
+      "speech": [
+        "Do-Re-Mi"
+      ]
+    },
+	{
+	  "character": "BlackMage",
+      "origin": "BottomRight",
+      "speech": [
+		"Do Re Mi\nFa So La\nTi Do"
+      ]
+    },
+    {
+      "character": "Ritz",
+      "origin": "TopLeft",
+      "speech": [
+        "Do, A deer!"
+      ]
+    },
+	{
+      "character": "BlackMage",
+      "origin": "BottomRight",
+      "speech": [
+        "A female deer!",
+		"Re, a drop of golden sun."
+      ]
+    },
+	{
+      "character": "Ritz",
+      "origin": "TopLeft",
+      "speech": [
+        "Me, my name I call myself.",
+		"Fa! a long long way to ruuuuuuuuuuun!"
+      ]
+    }
+  ]
+}
